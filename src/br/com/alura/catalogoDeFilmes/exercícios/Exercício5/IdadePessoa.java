@@ -1,4 +1,4 @@
-package br.com.alura.catalogoDeFilmes.modelos.Exercício5;
+package br.com.alura.catalogoDeFilmes.exercícios.Exercício5;
 
 public class IdadePessoa {
 

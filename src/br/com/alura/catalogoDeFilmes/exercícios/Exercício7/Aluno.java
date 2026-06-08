@@ -1,4 +1,4 @@
-package br.com.alura.catalogoDeFilmes.modelos.Exercício7;
+package br.com.alura.catalogoDeFilmes.exercícios.Exercício7;
 
 //Classe Aluno
 public class Aluno {

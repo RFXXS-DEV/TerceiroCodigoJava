@@ -1,4 +1,4 @@
-package br.com.alura.catalogoDeFilmes.modelos.Exercício6;
+package br.com.alura.catalogoDeFilmes.exercícios.Exercício6;
 
 public class Principal {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package br.com.alura.catalogoDeFilmes.modelos.Exercício4;
+package br.com.alura.catalogoDeFilmes.exercícios.Exercício4;
 
 // Crie uma classe ContaBancaria com os
 // seguintes atributos: numeroConta (privado), saldo (privado) e titular (publico).

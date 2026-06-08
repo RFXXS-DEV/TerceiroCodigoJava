@@ -1,5 +1,6 @@
-import br.com.alura.catalogoDeFilmes.modelos.Conteudo.Filmes;
-import br.com.alura.catalogoDeFilmes.modelos.Conteudo.Series;
+package br.com.alura.catalogoDeFilmes.modelos.Conteudo;
+
+import br.com.alura.catalogoDeFilmes.modelos.calculos.calculadoraDeTempo;
 
 public class Main {
 
@@ -27,7 +28,24 @@ public class Main {
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporadas(10);
-        System.out.println("Duração do Filme: " + lost.getDuracaoEmMinutos());
+        lost.setMinutosPorEpisodio(50);
+        System.out.println("Duração para maratonar Lost: " + lost.getDuracaoEmMinutos() + " Minutos");
+
+        Filmes outroFilme = new Filmes();
+
+        outroFilme.setNome("Avatar");
+        outroFilme.setAnoDeLancamento(2020);
+        outroFilme.setDuracaoEmMinutos(200);
+
+
+
+        calculadoraDeTempo calculadora = new calculadoraDeTempo();
+
+        calculadora.inclui(favorito);
+        calculadora.inclui(outroFilme);
+        calculadora.inclui(lost);
+        System.out.println(calculadora.getTempoTotal());
+
 
     }
 
