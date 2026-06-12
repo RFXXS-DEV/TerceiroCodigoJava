@@ -1,10 +1,21 @@
 package br.com.alura.catalogoDeFilmes.modelos.Conteudo;
 
-public class Episodios {
+import br.com.alura.catalogoDeFilmes.modelos.calculos.Classificavel;
+
+public class Episodios implements Classificavel {
 
     private int numero;
     private String nome;
     private Series serie;
+    private int totalVizualizacoes;
+
+    public int getTotalVizualizacoes() {
+        return totalVizualizacoes;
+    }
+
+    public void setTotalVizualizacoes(int totalVizualizacoes) {
+        this.totalVizualizacoes = totalVizualizacoes;
+    }
 
     public int getNumero() {
         return numero;
@@ -28,5 +39,17 @@ public class Episodios {
 
     public void setSerie(Series serie) {
         this.serie = serie;
+    }
+
+    @Override
+    public int getClassificacao() {
+        if (totalVizualizacoes > 100){
+            return 4;
+
+        }else {
+
+            return 2;
+
+        }
     }
 }

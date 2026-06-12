@@ -1,5 +1,6 @@
 package br.com.alura.catalogoDeFilmes.modelos.Conteudo;
 
+import br.com.alura.catalogoDeFilmes.modelos.calculos.FiltroRecomendacao;
 import br.com.alura.catalogoDeFilmes.modelos.calculos.calculadoraDeTempo;
 
 public class Main {
@@ -45,6 +46,17 @@ public class Main {
         calculadora.inclui(outroFilme);
         calculadora.inclui(lost);
         System.out.println(calculadora.getTempoTotal());
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+
+        filtro.filtra(favorito);
+
+        Episodios episodio = new Episodios();
+
+        episodio.setNumero(1);
+        episodio.setSerie(lost);
+        episodio.setTotalVizualizacoes(300);
+        filtro.filtra(episodio);
 
 
     }
