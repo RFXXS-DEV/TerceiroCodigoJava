@@ -3,12 +3,13 @@ package br.com.alura.catalogoDeFilmes.modelos.Conteudo;
 import br.com.alura.catalogoDeFilmes.modelos.calculos.FiltroRecomendacao;
 import br.com.alura.catalogoDeFilmes.modelos.calculos.calculadoraDeTempo;
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
-        Filmes favorito = new Filmes();
+        Filmes favorito = new Filmes("The Matrix");
 
-        favorito.setNome("The Matrix");
         favorito.setAnoDeLancamento(1999);
         favorito.setDuracaoEmMinutos(135);
         favorito.setIncluidoNoPlano(true);
@@ -32,9 +33,8 @@ public class Main {
         lost.setMinutosPorEpisodio(50);
         System.out.println("Duração para maratonar Lost: " + lost.getDuracaoEmMinutos() + " Minutos");
 
-        Filmes outroFilme = new Filmes();
+        Filmes outroFilme = new Filmes("Avatar");
 
-        outroFilme.setNome("Avatar");
         outroFilme.setAnoDeLancamento(2020);
         outroFilme.setDuracaoEmMinutos(200);
 
@@ -58,6 +58,20 @@ public class Main {
         episodio.setTotalVizualizacoes(300);
         filtro.filtra(episodio);
 
+        var filmeDoPaulo = new Filmes("Dogville");
+        filmeDoPaulo.setDuracaoEmMinutos(200);
+        filmeDoPaulo.setAnoDeLancamento(2003);
+        filmeDoPaulo.avalia(10);
+
+        ArrayList<Filmes> listaDeFilmes = new ArrayList<>();
+
+        listaDeFilmes.add(filmeDoPaulo);
+        listaDeFilmes.add(favorito);
+        listaDeFilmes.add(outroFilme);
+        System.out.println("Tamanho da lista " + listaDeFilmes.size());
+        System.out.println("Primeiro filme " + listaDeFilmes.get(0).getNome());
+        System.out.println(listaDeFilmes);
+        System.out.println("toString do filme " + listaDeFilmes.get(0).toString());
 
     }
 

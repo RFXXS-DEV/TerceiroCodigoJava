@@ -1,5 +1,9 @@
 package br.com.alura.catalogoDeFilmes.ProjetoFinalCurso;
 
+import br.com.alura.catalogoDeFilmes.modelos.Conteudo.Filmes;
+
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
         Musica minhaMusica = new Musica();
@@ -29,5 +33,7 @@ public class Principal {
         MinhasPreferidas preferidas = new MinhasPreferidas();
         preferidas.inclui(meuPodcast);
         preferidas.inclui(minhaMusica);
+
+
     }
 }
