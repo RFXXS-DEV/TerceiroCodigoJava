@@ -9,6 +9,12 @@ public class Titulo {
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
 
+
+    public Titulo(String nome, int anoDeLancamento) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -55,6 +61,8 @@ public class Titulo {
         System.out.println("Duração em minutos: " +duracaoEmMinutos);
         System.out.println("Incluído no plano: " +incluidoNoPlano);
     }
+
+
 
     public void avalia(double nota) {
         somaDasAvaliacoes += nota;
