@@ -1,5 +1,8 @@
-package br.com.alura.catalogoDeFilmes.modelos.Conteudo;
+package br.com.alura.catalogoDeFilmes.Principal;
 
+import br.com.alura.catalogoDeFilmes.modelos.Conteudo.Episodios;
+import br.com.alura.catalogoDeFilmes.modelos.Conteudo.Filmes;
+import br.com.alura.catalogoDeFilmes.modelos.Conteudo.Series;
 import br.com.alura.catalogoDeFilmes.modelos.calculos.FiltroRecomendacao;
 import br.com.alura.catalogoDeFilmes.modelos.calculos.calculadoraDeTempo;
 
